@@ -1,0 +1,20 @@
+<!-- String Interpolation -->
+<p>admin works! {{ myCourse }}</p>
+<button disabled="{{ propertyBinding }}">Property</button>
+
+<!-- Property Binding -->
+<button [disabled]="propertyBinding">Property</button>
+<input [type]="inputType" />{{ inputType }}
+
+<!-- event binding -->
+<select (change)="dropChanged($event)">
+  <option>Surat</option>
+  <option>Kerela</option>
+  <option>Goa</option>
+  <option>Thailand</option>
+</select>
+<br /><br /><br /><br /><br />
+<!-- <input type="text" value="{{ myCourse }}" /> -->
+
+<!-- two way data binding -->
+<input type="text" [(ngModel)]="myCourse" />
