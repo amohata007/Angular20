@@ -1,0 +1,18 @@
+<div class="row g-0">
+  <div class="col-6 p-2">
+    <h2 [ngClass]="color" class="m-0">My Bootstrap color is - {{ color }}</h2>
+    <button class="btn btn-success" (click)="click('bg-success')">
+      Success
+    </button>
+    <button class="btn btn-danger" (click)="click('bg-danger')">Danger</button>
+  </div>
+  <div class="col-6 p-2">
+    <h2
+      [ngStyle]="{ 'background-color': isDivGreen ? 'green' : 'red' }"
+      class="m-0"
+    >
+      Div2
+    </h2>
+    <button class="btn btn-primary" (click)="toggle()">Toggle</button>
+  </div>
+</div>
