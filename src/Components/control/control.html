@@ -1,0 +1,52 @@
+<div>
+  <button (click)="showData()">Show Data</button>
+  @if (isVisisble === true) {
+  <span> I'm the Dummy Data..!! </span>
+  } @else {
+  <span>I'm Hidden right now</span>
+  }
+  <button (click)="hideData()">Hide Data</button>
+</div>
+
+<div>
+  <input
+    placeholder="Enter short of month"
+    type="text"
+    [(ngModel)]="shortMonth"
+  />
+  @if(shortMonth==="jan"){
+  <span>January</span>
+  } @else if(shortMonth==="feb"){
+  <span>Febuaray</span>
+  } @else if(shortMonth==="mar"){
+  <span>March</span>
+  } @else if(shortMonth==="apr"){
+  <span>April</span>
+  } @else if(shortMonth==="may"){
+  <span>May</span>
+  } @else if(shortMonth==="jun"){
+  <span>June</span>
+  } @else if(shortMonth==="jul"){
+  <span>July</span>
+  } @else if(shortMonth==="aug"){
+  <span>August</span>
+  } @else if(shortMonth==="sep"){
+  <span>September</span>
+  } @else if(shortMonth==="oct"){
+  <span>October</span>
+  } @else if(shortMonth==="nov"){
+  <span>November</span>
+  } @else if(shortMonth==="dec"){
+  <span>December</span>
+  } @else {
+  <span>Invalid Input</span>
+  }
+</div>
+
+<div>
+  <ul>
+    @for (user of users; track $index){
+    <li>{{ $index }} {{ user }}</li>
+    }
+  </ul>
+</div>
