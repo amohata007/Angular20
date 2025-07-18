@@ -46,7 +46,9 @@
 <div>
   <ul>
     @for (user of users; track $index){
-    <li>{{ $index }} {{ user }}</li>
+    <li>{{ $index }} {{ user | uppercase }}</li>
     }
   </ul>
+
+  <h3>{{ date | date : "MMM-dd,yy" }}</h3>
 </div>
