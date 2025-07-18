@@ -1,1 +1,24 @@
-<p>user works!</p>
+<h1 class="text-center my-4">User List</h1>
+
+<div class="container">
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of userLists; track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address.city }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
