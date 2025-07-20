@@ -14,6 +14,11 @@ export class User implements OnInit {
   _service = inject(Service);
   userLists: any[] = [];
 
+  // Can call service like this as well but inject is the new way
+  // constructor(private _serviceUser: Service){
+
+  // }
+
   obj: any = {
     userId: 0,
     emailId: '',
