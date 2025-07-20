@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Service } from '../../Services/service';
 
 @Component({
   selector: 'app-user',
@@ -10,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class User implements OnInit {
   http = inject(HttpClient);
+  _service = inject(Service);
   userLists: any[] = [];
 
   obj: any = {
@@ -25,11 +27,9 @@ export class User implements OnInit {
   }
 
   getUsers() {
-    this.http
-      .get('https://jsonplaceholder.typicode.com/users')
-      .subscribe((res: any) => {
-        this.userLists = res;
-      });
+    this._service.getUsers().subscribe((res: any) => {
+      this.userLists = res;
+    });
   }
 
   saveInfo() {
