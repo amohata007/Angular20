@@ -28,7 +28,12 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/directive">Directive</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/child">Child</a>
+      </li>
     </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
+
+<app-child [message]="parentMessage"></app-child>

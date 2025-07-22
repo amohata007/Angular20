@@ -4,6 +4,7 @@ import { SignalEx } from '../Components/signal-ex/signal-ex';
 import { Control } from '../Components/control/control';
 import { User } from '../Components/user/user';
 import { Directive } from '../Components/directive/directive';
+import { Child } from '../Components/child/child';
 
 export const routes: Routes = [
   {
@@ -25,5 +26,9 @@ export const routes: Routes = [
   {
     path: 'directive',
     component: Directive,
+  },
+  {
+    path: 'child',
+    component: Child,
   },
 ];
